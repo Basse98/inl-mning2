@@ -1,4 +1,5 @@
 import java.io.Console;
+import java.util.Scanner;
 
 /**
  * Assignment 1 - Guessing Game
@@ -57,10 +58,10 @@ public class Guesser{
      * the player.
      */
     private String getReply(){
-        String reply = System.console().readLine();
+        String reply = new Scanner(System.in).nextLine();
         while(reply != null && !reply.equals("T") && !reply.equals("F")){
             System.out.println("Please type T or F");
-            reply = System.console().readLine();
+            reply = new Scanner(System.in).nextLine();
         }
         return reply;
     }
