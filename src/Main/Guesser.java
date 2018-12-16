@@ -1,3 +1,5 @@
+package Main;
+
 import java.io.Console;
 import java.util.Scanner;
 
@@ -5,7 +7,7 @@ import java.util.Scanner;
  * Assignment 1 - Guessing Game
  *
  * Here's the unfinished source code
- * for the Guesser class. It is your
+ * for the Main.Guesser class. It is your
  * task to complete the missing parts.
  */
 public class Guesser{
@@ -25,8 +27,13 @@ public class Guesser{
 
     // Write the constructor below this line.
     public Guesser(int low, int high){
-        this.low = low;
-        this.high = high;
+        if(high > low){
+            this.low = low;
+            this.high = high;
+        }else{
+            throw new IllegalArgumentException("The first parameter must be lower than the second parameter");
+        }
+
     }
 
     /*
